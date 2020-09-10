@@ -3,12 +3,23 @@ import Myc from './context.js'
 
 function Gs() {
 
+    const val = React.useContext(Myc)
+
     return (
-        <Myc.Consumer>
-            {
-                c => <div>{c}</div>
-            }
-        </ Myc.Consumer>
+        <>
+            <Myc.Consumer>
+                {
+                    c => <div>{c}</div>
+                }
+
+            </ Myc.Consumer>
+
+            <br />
+
+            <h1>{val}</h1>
+
+        </>
+
     )
 
 }
